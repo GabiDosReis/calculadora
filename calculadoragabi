@@ -1,0 +1,27 @@
+menu1 = 1 
+hist = []
+
+while menu1 == 1:
+    menu2 =input("Selecione a ação que deseja realizar: 1-calcular , 2-Histórico, 3-Finalizar")
+    match menu2:
+        case "1":
+            n1=float(input("Insira o primeiro número"))
+            op=input("Insira o operador")
+            n2=float(input("Insira o segundo número"))
+
+            match op:
+                case "+":
+                     result = n1 + n2
+                case "*":
+                    result = n1 * n2
+                case "-":
+                     result = n1 - n2
+                case "/":
+                    result = n1 / n2
+            
+            print(result)
+            hist.extend([n1 , op, n2, "=", result, "||"])
+        case "2":
+            print(hist)
+        case "3":
+            menu1 = 0
