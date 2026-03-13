@@ -1,0 +1,110 @@
+Aqui está um exemplo de **README.md** para o seu código de calculadora em Python. Você pode colocar esse texto em um arquivo chamado `README.md` no seu projeto.
+
+---
+
+# 📟 Calculadora em Python (CLI)
+
+Este projeto é uma **calculadora simples em Python executada no terminal**, que permite realizar operações matemáticas básicas, algumas operações especiais e visualizar o histórico dos cálculos realizados.
+
+## 🚀 Funcionalidades
+
+* ➕ Soma
+* ➖ Subtração
+* ✖️ Multiplicação
+* ➗ Divisão
+* 📊 Cálculo de porcentagem
+* √ Raiz quadrada
+* ^2 Potência ao quadrado
+* 🧹 Limpar cálculo
+* 📜 Histórico de operações
+
+## 🧠 Como funciona
+
+O programa utiliza:
+
+* **Loop `while`** para manter o sistema em execução.
+* **`match case`** (Python 3.10+) para controlar as opções do menu.
+* **Lista (`hist`)** para armazenar o histórico das operações.
+* A biblioteca padrão **`math`** para cálculo da raiz quadrada.
+
+## 📂 Estrutura do código
+
+Principais partes do programa:
+
+* **Menu principal**
+
+  * `1` → Realizar cálculo
+  * `2` → Mostrar histórico
+  * `3` → Finalizar programa
+
+* **Operadores disponíveis**
+
+  * `+` → Soma
+  * `-` → Subtração
+  * `*` → Multiplicação
+  * `/` → Divisão
+  * `%` → Porcentagem
+  * `raiz` → Raiz quadrada
+  * `^2` → Número ao quadrado
+  * `C` → Limpar cálculo
+
+## ▶️ Como executar
+
+1. Certifique-se de ter **Python 3.10 ou superior** instalado.
+2. Salve o código em um arquivo, por exemplo:
+
+```
+calculadora.py
+```
+
+3. Execute no terminal:
+
+```bash
+python calculadora.py
+```
+
+## 💻 Exemplo de uso
+
+```
+Selecione a ação que deseja realizar:
+1-calcular , 2-Histórico, 3-Finalizar
+
+1
+
+Insira o operador:
++
+
+Insira o primeiro número:
+10
+
+10 +
+
+20
+
+Resultado:
+30
+```
+
+## 📜 Histórico
+
+Ao escolher a opção **2**, o programa mostra todas as operações realizadas durante a execução.
+
+Exemplo:
+
+```
+[10.0, '+', 20.0, '=', 30.0, '||']
+```
+
+## ⚠️ Possíveis melhorias
+
+Algumas melhorias que podem ser adicionadas ao projeto:
+
+* Tratamento de erros (`try/except`)
+* Interface gráfica
+* Histórico formatado
+* Mais operações matemáticas
+* Melhor organização em funções
+
+## 👨‍💻 Autor
+
+Projeto desenvolvido para prática de **lógica de programação em Python**.
