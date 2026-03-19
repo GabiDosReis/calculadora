@@ -1,110 +1,123 @@
-Aqui está um exemplo de **README.md** para o seu código de calculadora em Python. Você pode colocar esse texto em um arquivo chamado `README.md` no seu projeto.
+# 🧮 Calculadora em Python
+
+## 📌 Descrição
+
+Este projeto consiste em uma calculadora desenvolvida em Python que realiza operações matemáticas básicas e conversões entre diferentes sistemas numéricos.
+
+O programa foi desenvolvido com foco em lógica de programação, sem a utilização de funções prontas para conversão (como `bin()`, `hex()` ou `oct()`), conforme os requisitos da atividade.
 
 ---
 
-# 📟 Calculadora em Python (CLI)
+## ⚙️ Funcionalidades
 
-Este projeto é uma **calculadora simples em Python executada no terminal**, que permite realizar operações matemáticas básicas, algumas operações especiais e visualizar o histórico dos cálculos realizados.
+### ➕ Operações matemáticas:
 
-## 🚀 Funcionalidades
+* Soma (+)
+* Subtração (-)
+* Multiplicação (*)
+* Divisão (/)
+* Porcentagem (%)
+* Raiz quadrada
+* Potência ao quadrado
+* Limpar cálculo (C)
 
-* ➕ Soma
-* ➖ Subtração
-* ✖️ Multiplicação
-* ➗ Divisão
-* 📊 Cálculo de porcentagem
-* √ Raiz quadrada
-* ^2 Potência ao quadrado
-* 🧹 Limpar cálculo
-* 📜 Histórico de operações
+---
 
-## 🧠 Como funciona
+### 🔄 Conversões numéricas:
 
-O programa utiliza:
+#### 📊 Decimal:
 
-* **Loop `while`** para manter o sistema em execução.
-* **`match case`** (Python 3.10+) para controlar as opções do menu.
-* **Lista (`hist`)** para armazenar o histórico das operações.
-* A biblioteca padrão **`math`** para cálculo da raiz quadrada.
+* Decimal → Binário
+* Decimal → Octal
+* Decimal → Hexadecimal
 
-## 📂 Estrutura do código
+#### 🔢 Binário:
 
-Principais partes do programa:
+* Binário → Decimal
 
-* **Menu principal**
+#### 🧮 Octal:
 
-  * `1` → Realizar cálculo
-  * `2` → Mostrar histórico
-  * `3` → Finalizar programa
+* Octal → Decimal
 
-* **Operadores disponíveis**
+#### 🔠 Hexadecimal:
 
-  * `+` → Soma
-  * `-` → Subtração
-  * `*` → Multiplicação
-  * `/` → Divisão
-  * `%` → Porcentagem
-  * `raiz` → Raiz quadrada
-  * `^2` → Número ao quadrado
-  * `C` → Limpar cálculo
+* Hexadecimal → Decimal
+* Hexadecimal → Binário
+* Hexadecimal → Octal
 
-## ▶️ Como executar
+---
 
-1. Certifique-se de ter **Python 3.10 ou superior** instalado.
-2. Salve o código em um arquivo, por exemplo:
+## 🧠 Lógica utilizada
 
-```
-calculadora.py
-```
+As conversões foram implementadas manualmente utilizando estruturas de repetição (`while`, `for`) e operações matemáticas.
 
-3. Execute no terminal:
+### Exemplos:
 
-```bash
-python calculadora.py
-```
+* **Decimal → Binário:**
 
-## 💻 Exemplo de uso
+  * Divisões sucessivas por 2
+  * Armazenamento dos restos
 
-```
-Selecione a ação que deseja realizar:
-1-calcular , 2-Histórico, 3-Finalizar
+* **Binário → Decimal:**
 
-1
+  * Soma das potências de base 2
 
-Insira o operador:
-+
+* **Hexadecimal → Decimal:**
 
-Insira o primeiro número:
-10
+  * Conversão manual de caracteres (0–9, A–F)
 
-10 +
+---
 
-20
+## 🚫 Restrições do projeto
 
-Resultado:
-30
-```
+* Não foi utilizado:
+
+  * `bin()`
+  * `hex()`
+  * `oct()`
+* Não foram utilizadas bibliotecas externas
+* Toda a lógica foi implementada manualmente
+
+---
+
+## 🗂️ Estrutura do programa
+
+O sistema funciona com um menu interativo:
+
+1. Calcular
+2. Visualizar histórico
+3. Finalizar programa
+
+O usuário pode realizar múltiplas operações até decidir encerrar.
+
+---
 
 ## 📜 Histórico
 
-Ao escolher a opção **2**, o programa mostra todas as operações realizadas durante a execução.
+O programa armazena todas as operações realizadas durante a execução em uma lista, permitindo consulta a qualquer momento.
 
-Exemplo:
+---
 
-```
-[10.0, '+', 20.0, '=', 30.0, '||']
-```
+## ▶️ Como executar
 
-## ⚠️ Possíveis melhorias
+1. Abra o arquivo `.py` no VS Code ou outro editor
+2. Execute o programa
+3. Utilize o menu para escolher as operações
 
-Algumas melhorias que podem ser adicionadas ao projeto:
+---
 
-* Tratamento de erros (`try/except`)
-* Interface gráfica
-* Histórico formatado
-* Mais operações matemáticas
-* Melhor organização em funções
+## 🎯 Objetivo
+
+O objetivo do projeto é reforçar conceitos fundamentais de programação, como:
+
+* Estruturas de repetição
+* Estruturas condicionais
+* Manipulação de variáveis
+* Lógica de algoritmos
+* Conversão entre bases numéricas
+
+---
 
 ## 👨‍💻 Autor
 
-Projeto desenvolvido para prática de **lógica de programação em Python**.
+Projeto desenvolvido para fins acadêmicos.

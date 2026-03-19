@@ -1,0 +1,168 @@
+
+
+menu1 = 1 
+hist = []
+
+while menu1 == 1:
+
+    menu2 = input("Selecione: 1-calcular , 2-histórico, 3-finalizar: ")
+
+    while menu2 not in ["1","2","3"]:
+        menu2 = input("Menu incorreto, digite novamente: ")
+
+    match menu2:
+
+        case "1":
+
+            op = input("Operador: ")
+            while op not in ["+","-","*","/","%","raiz","^2","C",
+                             "dec_bin","bin_dec","dec_oct","oct_dec",
+                             "dec_hex","hex_dec","hex_bin","hex_oct"]:
+                op = input("Operador inválido, digite novamente: ")
+            if op == "raiz":
+                n1 = float(input("Número: "))
+                result = n1 ** 0.5
+                n2 = 0
+
+            elif op == "^2":
+                n1 = float(input("Número: "))
+                result = n1 ** 2
+                n2 = 0
+
+            elif op == "C":
+                print("Cálculo limpo")
+                continue
+            elif op == "dec_bin":
+                n1 = int(input("Decimal: "))
+                n = n1
+                binario = ""
+                while n > 0:
+                    resto = n % 2
+                    binario = str(resto) + binario
+                    n = n // 2
+                result = binario
+                n2 = 0
+
+            elif op == "bin_dec":
+                valor = input("Binário: ")
+                decimal = 0
+                pot = 0
+                for i in range(len(valor)-1, -1, -1):
+                    decimal += int(valor[i]) * (2 ** pot)
+                    pot += 1
+                result = decimal
+                n1 = valor
+                n2 = 0
+
+            elif op == "dec_oct":
+                n1 = int(input("Decimal: "))
+                n = n1
+                octal = ""
+                while n > 0:
+                    resto = n % 8
+                    octal = str(resto) + octal
+                    n = n // 8
+                result = octal
+                n2 = 0
+
+            elif op == "oct_dec":
+                valor = input("Octal: ")
+                decimal = 0
+                pot = 0
+                for i in range(len(valor)-1, -1, -1):
+                    decimal += int(valor[i]) * (8 ** pot)
+                    pot += 1
+                result = decimal
+                n1 = valor
+                n2 = 0
+
+            elif op == "dec_hex":
+                n1 = int(input("Decimal: "))
+                n = n1
+                hexa = ""
+                chars = "0123456789ABCDEF"
+                while n > 0:
+                    resto = n % 16
+                    hexa = chars[resto] + hexa
+                    n = n // 16
+                result = hexa
+                n2 = 0
+
+            elif op == "hex_dec":
+                valor = input("Hexadecimal: ").upper()
+                chars = "0123456789ABCDEF"
+                decimal = 0
+                pot = 0
+                for i in range(len(valor)-1, -1, -1):
+                    decimal += chars.index(valor[i]) * (16 ** pot)
+                    pot += 1
+                result = decimal
+                n1 = valor
+                n2 = 0
+
+            elif op == "hex_bin":
+                valor = input("Hexadecimal: ").upper()
+                chars = "0123456789ABCDEF"
+                decimal = 0
+                pot = 0
+                for i in range(len(valor)-1, -1, -1):
+                    decimal += chars.index(valor[i]) * (16 ** pot)
+                    pot += 1
+                
+                n = decimal
+                binario = ""
+                while n > 0:
+                    resto = n % 2
+                    binario = str(resto) + binario
+                    n = n // 2
+
+                result = binario
+                n1 = valor
+                n2 = 0
+
+            elif op == "hex_oct":
+                valor = input("Hexadecimal: ").upper()
+                chars = "0123456789ABCDEF"
+                
+                decimal = 0
+                pot = 0
+                for i in range(len(valor)-1, -1, -1):
+                    decimal += chars.index(valor[i]) * (16 ** pot)
+                    pot += 1
+                
+                n = decimal
+                octal = ""
+                while n > 0:
+                    resto = n % 8
+                    octal = str(resto) + octal
+                    n = n // 8
+
+                result = octal
+                n1 = valor
+                n2 = 0
+
+            else:
+                n1 = float(input("Primeiro número: "))
+                n2 = float(input(f"{n1} {op}: "))
+
+                match op:
+                    case "+":
+                        result = n1 + n2
+                    case "-":
+                        result = n1 - n2
+                    case "*":
+                        result = n1 * n2
+                    case "/":
+                        result = n1 / n2
+                    case "%":
+                        result = (n1 * n2) / 100
+
+            print("Resultado:", result)
+
+            hist.extend([n1, op, n2, "=", result, "||"])
+
+        case "2":
+            print(hist)
+
+        case "3":
+            menu1 = 0
